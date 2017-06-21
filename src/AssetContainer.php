@@ -641,4 +641,17 @@ class AssetContainer {
         return true;
     }
 
+
+    /**
+     * Remove an asset from the registered assets.
+     *
+     * @param $type
+     * @param $name
+     */
+    public function remove($type,$name){
+        if(isset($this->assets[$type]) and isset($this->assets[$type][$name])){
+            unset($this->assets[$type][$name]);
+        }
+    }
+
 }
